@@ -112,3 +112,6 @@ button {
   outline: 3px solid rgba(39, 126, 255, 0.28);
   outline-offset: 2px;
 }
+
+/* CSS rules control the hidden/visible states */
+.hidden { display: none; }
