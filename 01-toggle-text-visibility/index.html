@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Text Visibility</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="toggle-card" aria-labelledby="page-title">
+        <header class="page-header">
+          <h1 id="page-title">Toggle Text Visibility</h1>
+          <p>Click the button to show or hide the text below.</p>
+        </header>
+
+        <div class="content-panel">
+          <p id="textContent" class="text-content">
+            JavaScript is a versatile programming language that runs in the
+            browser. With it, you can manipulate the DOM, respond to user events,
+            and build interactive web pages.
+          </p>
+
+          <div class="panel-divider" aria-hidden="true"></div>
+
+          <button id="toggleBtn" class="toggle-button" type="button">
+            Hide Text
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
