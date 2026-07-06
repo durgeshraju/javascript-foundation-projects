@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Like Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div
+      class="bg-background min-h-full flex flex-col items-center justify-center px-6 py-16 font-body"
+    >
+      <div
+        class="bg-white border border-border rounded-xl p-8 w-full max-w-sm flex flex-col items-center gap-6"
+        style="box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.07)"
+      >
+        <div class="flex flex-col items-center gap-2">
+          <h1 class="text-2xl font-headings font-bold text-foreground">
+            Like Counter
+          </h1>
+          <p class="text-sm text-muted-foreground text-center">
+            Click the buttons below to increase, decrease, or reset the count.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xs text-muted-foreground uppercase tracking-widest">
+            Count
+          </span>
+          <div
+            id="likeCount"
+            class="text-4xl font-bold text-primary w-24 h-24 rounded-xl bg-secondary flex items-center justify-center"
+          >
+            0
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3 w-full">
+          <button
+            id="likeBtn"
+            class="w-full bg-primary text-primary-foreground text-base font-medium py-3 rounded-lg"
+          >
+            👍 Like
+          </button>
+          <button
+            id="unlikeBtn"
+            class="w-full bg-secondary text-secondary-foreground text-base font-medium py-3 rounded-lg"
+          >
+            👎 Unlike
+          </button>
+          <button
+            id="resetBtn"
+            class="w-full bg-muted text-muted-foreground text-base font-medium py-3 rounded-lg"
+          >
+            🔄 Reset
+          </button>
+        </div>
+
+        <p class="text-xs text-muted-foreground text-center">
+          Connect your JavaScript to make it work!
+        </p>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
