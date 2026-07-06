@@ -402,6 +402,12 @@
     text-transform: uppercase;
   }
 }
+#resetBtn:disabled {
+  background-color: var(--color-muted);
+  color: var(--color-muted-foreground);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
