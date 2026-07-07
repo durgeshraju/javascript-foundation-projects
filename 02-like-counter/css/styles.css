@@ -402,7 +402,7 @@
     text-transform: uppercase;
   }
 }
-#resetBtn:disabled {
+:disabled {
   background-color: var(--color-muted);
   color: var(--color-muted-foreground);
   cursor: not-allowed;
