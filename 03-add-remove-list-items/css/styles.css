@@ -159,6 +159,36 @@ button {
   min-height: 116px;
 }
 
+.list-item {
+  align-items: center;
+  background: var(--input);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.list-item span {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.delete-btn {
+  background: transparent;
+  border: 0;
+  color: var(--muted-foreground);
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.delete-btn:hover {
+  color: var(--error-text);
+}
+
 .empty-state {
   align-items: center;
   color: var(--muted-foreground);
@@ -195,4 +225,9 @@ button {
   .primary-btn {
     width: 100%;
   }
+}
+
+
+[hidden] {
+  display: none !important;
 }
