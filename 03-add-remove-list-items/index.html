@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add and Remove List Items</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="list-card">
+        <header class="card-header">
+          <h1>Add and Remove List Items</h1>
+          <p>
+            Type an item below and click "Add Item" to add it to your list.
+            Click the delete button to remove an item.
+          </p>
+        </header>
+
+        <div class="form-area">
+          <div class="input-row">
+            <input
+              id="itemInput"
+              class="item-input"
+              type="text"
+              placeholder="Enter an item"
+              autocomplete="off"
+            />
+            <button id="addItemBtn" class="primary-btn" type="button">
+              Add Item
+            </button>
+          </div>
+
+          <p id="errorMessage" class="error-message" hidden1>
+            Please enter an item before adding.
+          </p>
+        </div>
+
+        <div class="rules-box">
+          <p class="rules-title">Validation Rules:</p>
+          <ul>
+            <li>Item cannot be empty</li>
+            <li>Item must be at least 2 characters long</li>
+            <li>Duplicate items are not allowed</li>
+            <li>Maximum 50 items per list</li>
+          </ul>
+        </div>
+
+        <div class="list-divider"></div>
+
+        <ul id="itemList" class="item-list">
+          <li id="emptyState" class="empty-state">
+            <span class="empty-icon" aria-hidden="true">[]</span>
+            <span>No items yet. Add one above!</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
