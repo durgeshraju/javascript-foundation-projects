@@ -13,13 +13,32 @@ const getEl = (selector) => document.querySelector(selector);
 
 // Add Item
 
-const items = [];
+let items = JSON.parse(localStorage.getItem('Items')) || [];
+
+// Empty State
+
+if(items.length > 0){
+    getEl('#emptyState').hidden = true;
+}
+
+items.forEach(displayListItems);
 
 // Event listeners to attach and perform actions
 
-getEl("#addItemBtn").addEventListener('click', function(e){
+function addItem(){
     const inputItem = getEl("#itemInput").value.trim();
     if(!inputItem) {
+        getEl('#errorMessage').textContent = 'Please enter an item before adding.';
+        getEl('#errorMessage').hidden = false;
+        return;
+    }
+    else if(inputItem.length < 2) {
+        getEl('#errorMessage').textContent = 'Item must be at least 2 characters long';
+        getEl('#errorMessage').hidden = false;
+        return;
+    }
+    else if(items.includes(inputItem)){
+        getEl('#errorMessage').textContent = 'Duplicate items are not allowed';
         getEl('#errorMessage').hidden = false;
         return;
     }
@@ -30,19 +49,27 @@ getEl("#addItemBtn").addEventListener('click', function(e){
         if(items.length > 0){
            getEl('#emptyState').hidden = true;
         }
-        displayListItems();
+        displayListItems(inputItem);
     }
-    
+    // SetItem to local storage
+    localStorage.setItem('Items', JSON.stringify(items));
+}
+
+getEl("#addItemBtn").addEventListener('click', addItem);
+
+getEl("#itemInput").addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        addItem();
+    }
 });
 
-// Add Item to DOM
+// Display Items to DOM
 
-function displayListItems () {
-    const latestItem = items[items.length - 1];
+function displayListItems (item) {
     const li = document.createElement('li');
     li.className = 'list-item';
     const span = document.createElement('span');
-    span.textContent = latestItem;
+    span.textContent = item;
     const button = document.createElement('button');
     button.className = 'delete-btn';
     button.type = 'button';
@@ -68,10 +95,10 @@ function removeItem(){
 
         if(items.length === 0){
             getEl('#emptyState').hidden = false;
-        }     
+        }
+
+        localStorage.setItem('Items', JSON.stringify(items));
     });
 }
 
 removeItem();
-
-// Empty State
