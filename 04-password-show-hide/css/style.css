@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f172a;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 38%),
+    linear-gradient(135deg, #f8fbff 0%, #eef4fb 45%, #f8fbff 100%);
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.main-card {
+  width: 100%;
+  max-width: 1180px;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 62px 74px 50px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.08);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.header h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #0b1528;
+  margin-bottom: 24px;
+}
+
+.header p {
+  font-size: 25px;
+  color: #4b5563;
+}
+
+.password-card {
+  border: 1px solid #cfd8e3;
+  border-radius: 18px;
+  padding: 36px 46px 40px;
+  margin-bottom: 34px;
+}
+
+.password-card label {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.password-field {
+  height: 84px;
+  border: 1px solid #b8c3d1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  background: #ffffff;
+}
+
+.password-field input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 30px;
+  letter-spacing: 8px;
+  color: #111827;
+  background: transparent;
+}
+
+.eye-btn {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #5f6b7a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye-btn svg,
+.mini-password-field svg {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+}
+
+.secure-text {
+  font-size: 22px;
+  color: #4b5563;
+  margin-top: 24px;
+  margin-bottom: 46px;
+}
+
+.info-box {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  border: 1px solid #bfdbfe;
+  background: #f8fbff;
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.info-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-box h2 {
+  font-size: 27px;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+.info-box p {
+  font-size: 20px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.preview-card {
+  border: 1px solid #cfd8e3;
+  border-radius: 16px;
+  padding: 30px 46px 28px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 34px;
+}
+
+.preview-card h2 {
+  font-size: 26px;
+  color: #111827;
+}
+
+.preview-content {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.preview-item p {
+  font-size: 20px;
+  color: #4b5563;
+  margin-bottom: 14px;
+}
+
+.mini-password-field {
+  height: 70px;
+  border: 1px solid #b8c3d1;
+  border-radius: 10px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #5f6b7a;
+  background: #ffffff;
+}
+
+.mini-password-field span {
+  font-size: 24px;
+  color: #2f3743;
+  letter-spacing: 3px;
+}
+
+.preview-item:last-child .mini-password-field span {
+  letter-spacing: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 105px;
+  background: #d8dee8;
+}
+
+@media (max-width: 900px) {
+  .main-card {
+    padding: 42px 28px;
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .header p {
+    font-size: 19px;
+  }
+
+  .password-card {
+    padding: 28px 24px;
+  }
+
+  .preview-card {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-content {
+    grid-template-columns: 1fr;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-wrapper {
+    padding: 24px 14px;
+  }
+
+  .main-card {
+    border-radius: 18px;
+    padding: 32px 18px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .password-field {
+    height: 68px;
+  }
+
+  .password-field input {
+    font-size: 22px;
+  }
+
+  .info-box {
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .preview-card {
+    padding: 24px;
+  }
+}
