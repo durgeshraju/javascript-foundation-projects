@@ -264,3 +264,15 @@ body {
     padding: 24px;
   }
 }
+
+.eye-off-icon {
+  display: none;
+}
+
+.eye-btn.visible .eye-icon {
+  display: none;
+}
+
+.eye-btn.visible .eye-off-icon {
+  display: block;
+}
